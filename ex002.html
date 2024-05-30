@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1 - Exercicio
+        // window.alert(`1 - Coloque dois números para descobrir qual é o maior entre eles:`);
+        // var numero1 = parseInt(prompt("Digite o primeiro número:"));
+        // var numero2 = parseInt(prompt("Digite o segundo número:"));
+        // window.alert(`o número maior é ${numero1>numero2?numero1:numero2}`);
+
+        // 2 - Exercicio
+        // window.alert(`Coloque um valor para saber se é positivo ou negativo`);
+        // var numeroQualquer = parseInt(prompt(`Coloque um valor`));
+        // window.alert(`o valor digitado é ${numeroQualquer===0? "zero":numeroQualquer<0?"negativo":"positivo"}`);
+
+        // 3 - Exercicio
+        // let arrayEx = [];
+        // window.alert(`insira tres valores diferentes`);
+        // arrayEx.push(parseInt(prompt(`Valor 1`)));
+        // arrayEx.push(parseInt(prompt(`Valor 2`)));
+        // arrayEx.push(parseInt(prompt(`Valor 3`)));
+        // window.alert(`o maior valor é  ${Math.max.apply(null, arrayEx )}`);
+
+        // 4 - Exercicio
+        // let arrayEx4 = [];
+        // window.alert(`insira tres valores diferentes no final iremos somar os dois valores maiores`);
+        // arrayEx4.push(parseInt(prompt(`Valor 1`)));
+        // arrayEx4.push(parseInt(prompt(`Valor 2`)));
+        // arrayEx4.push(parseInt(prompt(`Valor 3`)));
+        // let valores = arrayEx4.sort(function(a, b){return b - a;})
+        // window.alert(`o maior valor é  ${valores[0]+valores[1]}`);
+
+        // 5 - Exercicio
+        // let arrayEx5 = [];
+        // window.alert(`insira tres valores diferentes no final iremos dizer a media aritmetica:`);
+        // arrayEx5.push(parseInt(prompt(`Valor 1`)));
+        // arrayEx5.push(parseInt(prompt(`Valor 2`)));
+        // arrayEx5.push(parseInt(prompt(`Valor 3`)));
+        // arrayEx5.push(parseInt(prompt(`Valor 4`)));
+        // arrayEx5.push(parseInt(prompt(`Valor 5`)));
+        // arrayEx5.push(parseInt(prompt(`Valor 6`)));
+        // window.alert(`A média aritimética é: ${arrayEx5.reduce((a, b) => a + b, 0) / arrayEx5.length}`);
+
+
+        // 6 - Exercicio
+        // let arrayEx6 = [];
+        // window.alert(`insira quatro valores diferentes no final iremos informar o menor, o maior e o ultimo numero informado:`);
+        // arrayEx6.push(parseInt(prompt(`Valor 1`)));
+        // arrayEx6.push(parseInt(prompt(`Valor 2`)));
+        // arrayEx6.push(parseInt(prompt(`Valor 3`)));
+        // arrayEx6.push(parseInt(prompt(`Valor 4`)));
+        // window.alert(`
+        // O primeiro valor informado é ${arrayEx6[0]} \n
+        // O último valor é ${arrayEx6[arrayEx6.length-1]}\n
+        // O maior valor entre eles é ${Math.max.apply(null, arrayEx6 )}`);
+
+        // 7 - Exercicio
+        // let arrayEx7 = [];
+        // window.alert(`insira seis valores diferentes:`);
+        // arrayEx7.push(parseInt(prompt(`Valor 1`)));
+        // arrayEx7.push(parseInt(prompt(`Valor 2`)));
+        // arrayEx7.push(parseInt(prompt(`Valor 3`)));
+        // arrayEx7.push(parseInt(prompt(`Valor 4`)));
+        // arrayEx7.push(parseInt(prompt(`Valor 5`)));
+        // arrayEx7.push(parseInt(prompt(`Valor 6`)));
+        // alert(`
+        // Soma dos valores inferior de 72 é ${arrayEx7.filter(e=>e<72).reduce((a, b) => a + b, 0)}\n
+        // soma dos valores informador ${arrayEx7}`);
+
+        // 8 - Exercicio
+        // let arrayEx7 = [];
+        // window.alert(`insira quatro valores de zero á dez, para descobrir a media:`);
+        // arrayEx7.push(parseInt(prompt(`Valor 1`)));
+        // arrayEx7.push(parseInt(prompt(`Valor 2`)));
+        // arrayEx7.push(parseInt(prompt(`Valor 3`)));
+        // arrayEx7.push(parseInt(prompt(`Valor 4`)));
+        // alert(`${(arrayEx7.filter(e=> e > 0 && e < 10).reduce((a, b) => a + b, 0) / arrayEx7.filter(e=> e > 0 && e < 10).length) > 5 ? "Você passou no teste" : "tente novamente"}`);
+
+        // 9 - Exercicio 
+        // let nascimento = parseInt(prompt(`insira o seu ano de nascimento 1`));
+        // let esseAno = new Date().getFullYear()
+        // alert(`${(esseAno-nascimento)>=16?"Voce pode votar esse ano":"Voce nao pode votar"}`)
+
+        // 10 - Exercicio
+        // let pessoa = {
+        //     altura:0,
+        //     sexo:0,
+        //     pesoIdeal:(altura,sexo)=>{
+        //         if(sexo===1) return `Seu pesso ideal é ${((62.1*altura)-44.7).toFixed(2)} kg}`
+        //         return `Seu pesso ideal é ${((72.7*altura)-58).toFixed(2)} kg}`
+        //     }
+        // }
+        // pessoa.sexo = (parseInt(prompt(`Escreva seu sexo 1 feminino 2 para masculino:`)));
+        // pessoa.altura = (parseFloat(prompt(`Escreva sua altura ex: 1.70`)));
+        // alert(pessoa.pesoIdeal(pessoa.altura,pessoa.sexo))
+
+
+
+        // 11 - Exercicio
+        let calculadora = {
+            numeros:[],
+            operation:0,
+            formula:(oparacao,numeros)=>{
+                if(oparacao===1)return `valor: ${numeros[0]+numeros[1]}`
+                if(oparacao===2)return `valor: ${numeros[0]-numeros[1]}`
+                if(oparacao===3)return `valor: ${numeros[0]/numeros[1]}`
+                if(oparacao===4)return `valor: ${numeros[0]*numeros[1]}`
+                return `Operacao invalida !`;
+            }
+        }
+        calculadora.numeros.push((parseInt(prompt(`Escreva um número:`))));
+        calculadora.numeros.push((parseInt(prompt(`Escreva um número:`))));
+        calculadora.operation = (parseInt(prompt(`Coloque 1 para Adição, 2 para Subtração, 3 para Divisão e 4 para Multiplicação:`)));
+
+        alert(calculadora.formula(calculadora.operation,calculadora.numeros))
+
+
+    </script>
+</body>
+
+</html>
